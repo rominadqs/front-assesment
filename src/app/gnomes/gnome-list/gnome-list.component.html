@@ -1,0 +1,16 @@
+<div class="collection">
+  <div *ngIf="gnomes">
+    <mat-list>
+      <h2 md-header>{{title}}</h2>
+      <mat-list-item *ngFor="let gnome of gnomes"
+          [class.selected]="gnome===selectedGnome"
+          (click)="selectGnome(gnome)">
+          <p md-line>
+              <span>{{gnome.name}}</span>
+          </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

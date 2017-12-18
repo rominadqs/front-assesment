@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { DataService } from './data.service';
+import { DataService } from './core/data.service';
 
 @Component({
   selector: 'ro-root',

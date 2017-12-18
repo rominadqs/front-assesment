@@ -1,31 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatListModule, MatProgressBarModule } from '@angular/material';
-import { MatInputModule } from '@angular/material';
 import { Http, HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
-import { GnomesComponent } from './gnomes/gnomes.component';
-import { DataService } from './data.service';
-
+import { DataService } from './core/data.service';
+import { GnomeListComponent } from './gnomes/gnome-list/gnome-list.component';
+import { GnomeDetailComponent } from './gnomes/gnome-detail/gnome-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GnomesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatListModule,
-    MatInputModule,
     HttpModule,
-    MatProgressBarModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
