@@ -1,16 +1,20 @@
-<div class="collection">
-  <div *ngIf="gnomes">
-    <mat-list>
-      <h2 md-header>{{title}}</h2>
-      <mat-list-item *ngFor="let gnome of gnomes"
-          [class.selected]="gnome===selectedGnome"
-          (click)="selectGnome(gnome)">
-          <p md-line>
-              <span>{{gnome.name}}</span>
-          </p>
-      </mat-list-item>
-    </mat-list>
+<div class="col s4">
+  <div class="collection">
+    <input #txtFname placeholder="Filter by Name" />
+    <div *ngIf="gnomes">
+      <mat-list>
+        <mat-list-item *ngFor="let gnome of gnomes | searchfilter: 'name' : txtFname.value"
+            [class.active]="gnome===selectedGnome"
+            (click)="selectGnome(gnome)"
+            class="collection-item">
+            <p md-line>
+                <span>{{gnome.name}}</span>
+            </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </div>
-
+</div>
+<div class="col s8">
   <router-outlet></router-outlet>
 </div>

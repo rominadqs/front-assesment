@@ -6,7 +6,7 @@ import { GnomesRoutingModule } from './gnomes-routing.module';
 import { GnomesComponent } from './gnomes.component';
 import { GnomeDetailComponent } from './gnome-detail/gnome-detail.component';
 import { GnomeListComponent } from './gnome-list/gnome-list.component';
-
+import { SearchFilterPipe } from '../core/pipe.module';
 @NgModule({
   imports: [
     GnomesRoutingModule,
@@ -19,6 +19,7 @@ import { GnomeListComponent } from './gnome-list/gnome-list.component';
     GnomesComponent,
     GnomeListComponent,
     GnomeDetailComponent,
+    SearchFilterPipe
   ]
 })
 export class GnomesModule { }

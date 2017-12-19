@@ -1,10 +1,36 @@
-<div class="animated slideInRight detail">
-  <h2 md-header>Details</h2>
-
-  <div class="detail" *ngIf="gnome">
-    <div><i></i></div>
-    <p>
-      <span>{{gnome.name}}</span>
-    </p>
+  <div class="animated slideInRight detail">
+    <div class="detail" *ngIf="gnome">
+      <div class="row">
+          <div class="col s4">
+              <img class="responsive-img" src="{{gnome.thumbnail}}">
+          </div>
+          <div class="col s8">
+              <h4>{{gnome.name}}</h4>
+              <div><span class="label">Age: </span>{{gnome.age}}</div>
+              <div><span class="label">Weight :</span>{{gnome.weight}}</div>
+              <div><span class="label">Height: </span>{{gnome.height}}</div>
+              <div><span class="label">Hair color: </span>{{gnome.hair_color}}</div>
+              <div *ngIf="gnome.professions">
+                  <span class="label">Professions: </span>
+                  <mat-list>
+                    <mat-list-item *ngFor="let job of gnome.professions" class="collection-item">
+                        <div>
+                            <span>{{job}}</span>
+                        </div>
+                    </mat-list-item>
+                  </mat-list>
+              </div>
+              <div *ngIf="gnome.friends">
+                  <span class="label">Friends: </span>
+                  <mat-list>
+                    <mat-list-item *ngFor="let friend of gnome.friends" class="collection-item">
+                        <div>
+                            <span>{{friend}}</span>
+                        </div>
+                    </mat-list-item>
+                  </mat-list>
+              </div>
+          </div>
+      </div>
+    </div>
   </div>
-</div>

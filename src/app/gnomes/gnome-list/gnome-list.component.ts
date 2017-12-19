@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import {BrowserModule} from '@angular/platform-browser'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatListModule} from '@angular/material';
 import { Gnome, ConfigService, DataService } from '../../core';
 import { Subscription } from 'rxjs/Subscription';

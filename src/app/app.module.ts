@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { DataService } from './core/data.service';
 import { GnomeListComponent } from './gnomes/gnome-list/gnome-list.component';
 import { GnomeDetailComponent } from './gnomes/gnome-detail/gnome-detail.component';
-
 @NgModule({
   declarations: [
     AppComponent
